@@ -74,7 +74,7 @@ body {
 
 .navbar-subtitle {
   font-family: 'Cinzel', serif !important;
-
+  text-align: center;
   font-size: 1.2em;
   font-weight: 700; /* Make the font bold */
   letter-spacing: 1px; /* Add some spacing between letters */
@@ -570,10 +570,10 @@ body {
   }
 
   .navbar-title {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   .navbar-subtitle {
-    font-size: 1em;
+    font-size: 0.9em;
   }
 
   .navbar .hamburger {
@@ -654,14 +654,16 @@ body {
   }
   .navbar-logo {
     height: 35px;
-    margin: 1px 0px 0px 0;
+    margin: 1px 0px 1px 0;
   }
 
   .navbar-title {
-    font-size: 0.6em;
+    font-size: 0.4em;
+    letter-spacing: unset;
   }
   .navbar-subtitle {
-    font-size: 0.6em;
+    font-size: 0.4em;
+    letter-spacing: unset;
   }
   .navbar-links a {
     font-size: 2em; /* Increase font size further for larger mobile screens */
@@ -703,14 +705,16 @@ body {
   }
   .navbar-logo {
     height: 30px;
-    margin: 0px 0px 0px 0;
+    margin: 1px 0px 0px 0;
   }
 
   .navbar-title {
-    font-size: 0.5em;
+    font-size: 0.3em;
+    letter-spacing: unset;
   }
   .navbar-subtitle {
-    font-size: 0.5em;
+    font-size: 0.3em;
+    letter-spacing: unset;
   }
   .hamburger {
     width: 30px;

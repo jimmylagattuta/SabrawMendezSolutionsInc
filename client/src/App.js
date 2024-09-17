@@ -109,7 +109,7 @@ function App() {
               <span className="navbar-subtitle">Inc.</span>
             </div>
           </Link>
-          {window.innerWidth <= 860 ? (
+          {/* {window.innerWidth <= 860 ? (
             <>
               {user ? (
                 <div
@@ -153,7 +153,7 @@ function App() {
               )}
 
             </>
-          )}
+          )} */}
           <div className="hamburger" onClick={(e) => { e.preventDefault(); toggleMenu(); }}>
             <div className={`bar ${menuOpen ? 'open' : ''}`}></div>
             <div className={`bar ${menuOpen ? 'open' : ''}`}></div>

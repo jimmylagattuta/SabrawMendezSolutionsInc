@@ -20,7 +20,7 @@ const Intro = () => {
       <div className="hero-overlay">
         <div className="hero-text">
           <h1>Easy-to-use Universal Brace</h1>
-          <p>Breathable. Universal. Lumbar-sacral orthotic brace.</p>
+          <p>Breathable. Universal. Lumbar-Sacral Orthotic Brace.</p>
           <button className="hero-button">Your Button</button>
         </div>
       </div>

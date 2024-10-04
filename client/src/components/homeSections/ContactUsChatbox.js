@@ -57,7 +57,7 @@ const ContactUsChatbox = () => {
           setSubmitted(true);
           console.log('Email sent successfully:', formData);
         } else {
-          console.error('Email sending failed');
+          console.error('Email sending failed', response);
           alert('There was an error(1) sending your message. Please try again later.');
         }
       } catch (error) {

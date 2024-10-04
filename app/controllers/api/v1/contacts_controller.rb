@@ -1,8 +1,6 @@
 module Api
     module V1
-      class ContactsController < ApplicationController
-        skip_before_action :verify_authenticity_token
-  
+      class ContactsController < ApplicationController  
         def create
           contact_params = params.require(:contact).permit(:first_name, :last_name, :email, :message)
           ContactMailer.contact_email(contact_params).deliver_now

@@ -40,12 +40,26 @@ const ContactUsChatbox = () => {
     e.preventDefault();
     const formErrors = validateForm();
     if (Object.keys(formErrors).length === 0) {
+      const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
       try {
-        await axios.post('https://sabraw-mendez-solutions-dfd5e2f89a6a.herokuapp.com/api/v1/contact', {
-          contact: formData,
+        const response = await fetch('https://sabraw-mendez-solutions-dfd5e2f89a6a.herokuapp.com/api/v1/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': csrfToken,
+          },
+          body: JSON.stringify({
+            contact: formData,
+          }),
         });
-        setSubmitted(true);
-        console.log('Form submitted:', formData);
+
+        if (response.ok) {
+          setSubmitted(true);
+          console.log('Email sent successfully:', formData);
+        } else {
+          console.error('Email sending failed');
+          alert('There was an error sending your message. Please try again later.');
+        }
       } catch (error) {
         console.error('Error sending email:', error);
         alert('There was an error sending your message. Please try again later.');

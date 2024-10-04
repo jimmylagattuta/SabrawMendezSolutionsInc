@@ -1,0 +1,41 @@
+.brace-support-section {
+    position: relative;
+    margin: 20px auto;
+    max-width: 800px;
+  }
+  
+  .brace-support-image-container {
+    position: relative;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-in-out;
+  }
+  
+  .brace-support-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+  
+  .brace-support-overlay {
+    position: absolute;
+    bottom: 10%;
+    left: -25%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+    width: 80%;
+    max-width: 500px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-in-out;
+  }
+  
+  .fade-up-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Intro.css';
 
 const images = [
@@ -21,7 +22,11 @@ const Intro = () => {
         <div className="hero-text">
           <h1>Easy-to-use Universal Brace</h1>
           <p>Breathable. Universal. Lumbar-Sacral Orthotic Brace.</p>
-          <button className="hero-button">Your Button</button>
+          <button className="hero-button">
+            <Link to="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>
+              Contact Us
+            </Link>
+          </button>
         </div>
       </div>
       <div className="hero-image-container">

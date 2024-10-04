@@ -1,0 +1,42 @@
+.brace-comfort-section {
+    position: relative;
+    margin: 20px auto;
+    max-width: 800px;
+  }
+  
+  .brace-comfort-image-container {
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-in-out;
+  }
+  
+  .brace-comfort-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+  
+  .brace-comfort-overlay {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-in-out;
+  }
+  
+  .fade-up-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

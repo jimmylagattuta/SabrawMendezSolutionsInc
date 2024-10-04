@@ -162,20 +162,20 @@ function App() {
         </div>
         <div className={`navbar-links ${menuOpen ? 'show' : ''}`}>
           <Link to="/" onClick={closeMenu}>Home</Link>
-          <Link to="/products" onClick={closeMenu}>Products</Link>
-          <Link to="/company" onClick={closeMenu}>Company</Link>
-          <Link to="/help" onClick={closeMenu}>Help</Link>
-          <Link to="/faq" onClick={closeMenu}>FAQ</Link>
+          {/* <Link to="/products" onClick={closeMenu}>Products</Link> */}
+          {/* <Link to="/company" onClick={closeMenu}>Company</Link> */}
+          {/* <Link to="/help" onClick={closeMenu}>Help</Link> */}
+          {/* <Link to="/faq" onClick={closeMenu}>FAQ</Link> */}
           <Link to="/contact" onClick={closeMenu}>Contact</Link>
         </div>
       </div>
       <div className="content" style={{ paddingTop: `${navbarHeight}px` }}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/company" element={<Company />} />
-          <Route path="/help" element={<Help />} />
-          <Route path="/faq" element={<FAQ />} />
+          {/* <Route path="/products" element={<Products />} /> */}
+          {/* <Route path="/company" element={<Company />} /> */}
+          {/* <Route path="/help" element={<Help />} /> */}
+          {/* <Route path="/faq" element={<FAQ />} /> */}
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>

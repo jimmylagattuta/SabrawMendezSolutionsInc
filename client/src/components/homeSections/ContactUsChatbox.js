@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './Contact.css';
+import './ContactUsChatbox.css';
 
-function Contact() {
+const ContactUsChatbox = () => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -134,6 +134,6 @@ function Contact() {
       )}
     </div>
   );
-}
+};
 
-export default Contact;
+export default ContactUsChatbox;

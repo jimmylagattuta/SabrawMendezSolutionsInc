@@ -58,11 +58,11 @@ const ContactUsChatbox = () => {
           console.log('Email sent successfully:', formData);
         } else {
           console.error('Email sending failed');
-          alert('There was an error sending your message. Please try again later.');
+          alert('There was an error(1) sending your message. Please try again later.');
         }
       } catch (error) {
         console.error('Error sending email:', error);
-        alert('There was an error sending your message. Please try again later.');
+        alert('There was an error(2) sending your message. Please try again later.');
       }
     } else {
       setErrors(formErrors);

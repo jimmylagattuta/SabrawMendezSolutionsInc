@@ -39,3 +39,23 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+@media (max-width: 1279px) {
+  .brace-relief-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .brace-relief-overlay {
+    position: static;
+    transform: none;
+    margin-top: -40px; /* Adjust this value if needed to properly align the text with the image */
+    width: 90%;
+    max-width: none;
+  }
+
+  .brace-relief-image-container {
+    width: 100%;
+  }
+}

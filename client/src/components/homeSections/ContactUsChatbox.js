@@ -20,6 +20,7 @@ const ContactUsChatbox = () => {
       [name]: type === 'checkbox' ? checked : value,
     }));
   };
+  
 
   const validateForm = () => {
     const newErrors = {};

@@ -50,7 +50,7 @@
     .brace-comfort-overlay {
       position: static;
       transform: none;
-      margin-top: -40px; /* Adjust this value as needed to align the text properly */
+      margin: -40px auto 40px auto;
       width: 90%;
       max-width: none;
     }

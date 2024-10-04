@@ -16,6 +16,8 @@
     height: auto;
     display: block;
     border-radius: 8px;
+    position: relative;
+    z-index: -1;
   }
   
   .brace-easeofuse-overlay {

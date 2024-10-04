@@ -36,16 +36,25 @@ const ContactUsChatbox = () => {
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const formErrors = validateForm();
     if (Object.keys(formErrors).length === 0) {
-      setSubmitted(true);
-      console.log('Form submitted:', formData);
+      try {
+        await axios.post('https://sabraw-mendez-solutions-dfd5e2f89a6a.herokuapp.com/api/v1/contact', {
+          contact: formData,
+        });
+        setSubmitted(true);
+        console.log('Form submitted:', formData);
+      } catch (error) {
+        console.error('Error sending email:', error);
+        alert('There was an error sending your message. Please try again later.');
+      }
     } else {
       setErrors(formErrors);
     }
   };
+  
 
   return (
     <div className="contact-section">

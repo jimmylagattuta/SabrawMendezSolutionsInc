@@ -1,5 +1,5 @@
 class ContactMailer < ApplicationMailer
-    default from: 'kenneth@purehealthdx.com'
+    default from: 'jimmy.lagattuta@gmail.com'
   
     def contact_email(contact_params)
       puts "*" * 100
@@ -12,7 +12,8 @@ class ContactMailer < ApplicationMailer
       @user_email = contact_params[:email]
   
       mail(
-        to: 'receiving-email@example.com', # Replace with your receiving email
+        to: 'jimmy.lagattuta@gmail.com', # Replace with your receiving email
+        cc: 'kenneth@purehealthdx.com',
         subject: 'New Contact Form Submission'
       )
     end

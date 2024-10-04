@@ -42,7 +42,7 @@ const ContactUsChatbox = () => {
     if (Object.keys(formErrors).length === 0) {
       const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
       try {
-        const response = await fetch('https://sabraw-mendez-solutions-dfd5e2f89a6a.herokuapp.com/api/v1/contact', {
+        const response = await fetch('https://sabraw-mendez-solutions-dfd5e2f89a6a.herokuapp.com/contact', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

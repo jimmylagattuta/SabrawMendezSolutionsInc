@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   post '/login', to: "sessions#create"
   delete "/logout", to: "sessions#destroy"  
   delete "/logout", to: "sessions#destroy"
-  post '/contact', to: 'api/v1/contacts#create'
+  post '/contact', to: 'api/v1/contact#create'
 
   get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
 

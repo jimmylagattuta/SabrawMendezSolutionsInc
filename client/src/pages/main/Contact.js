@@ -36,12 +36,34 @@ function Contact() {
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const formErrors = validateForm();
     if (Object.keys(formErrors).length === 0) {
-      setSubmitted(true);
-      console.log('Form submitted:', formData);
+      const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
+      try {
+        const response = await fetch('https://sabraw-mendez-solutions-dfd5e2f89a6a.herokuapp.com/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': csrfToken,
+          },
+          body: JSON.stringify({
+            contact: formData,
+          }),
+        });
+
+        if (response.ok) {
+          setSubmitted(true);
+          console.log('Email sent successfully:', formData);
+        } else {
+          console.error('Email sending failed', response);
+          alert('There was an error sending your message. Please try again later.');
+        }
+      } catch (error) {
+        console.error('Error sending email:', error);
+        alert('There was an error sending your message. Please try again later.');
+      }
     } else {
       setErrors(formErrors);
     }

@@ -1,7 +1,7 @@
 class ContactMailer < ApplicationMailer
     default from: 'jimmy.lagattuta@gmail.com'
   
-    def contact_email(contact_params)
+    def contact_mail(contact_params)
       puts "*" * 100
       puts "contact_params"
       puts contact_params.inspect

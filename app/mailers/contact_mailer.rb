@@ -6,8 +6,8 @@ class ContactMailer < ApplicationMailer
       puts "contact_params"
       puts contact_params.inspect
       puts "*" * 100
-      @first_name = contact_params[:first_name]
-      @last_name = contact_params[:last_name]
+      @firstName = contact_params[:firstName]
+      @lastName = contact_params[:lastName]
       @message = contact_params[:message]
       @user_email = contact_params[:email]
   

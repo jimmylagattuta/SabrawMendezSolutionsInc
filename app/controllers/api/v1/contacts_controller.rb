@@ -4,7 +4,7 @@ module Api
         skip_before_action :authenticate_user, only: [:create]
 
         def create
-          contact_params = params.require(:contact).permit(:first_name, :last_name, :email, :message)
+          contact_params = params.require(:contact).permit(:firstName, :lastName, :email, :message)
           puts "Attempting to send email with params: #{contact_params.inspect}"
           ContactMailer.contact_email(contact_params).deliver_now
           puts "Email sent successfully"

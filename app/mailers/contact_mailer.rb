@@ -14,7 +14,7 @@ class ContactMailer < ApplicationMailer
       mail(
         to: 'jimmy.lagattuta@gmail.com', # Replace with your receiving email
         cc: 'kenneth@purehealthdx.com',
-        subject: 'New Contact Form Submission'
+        subject: 'SMS Inc: New Submission for Contact Us Form'
       )
     end
   end
